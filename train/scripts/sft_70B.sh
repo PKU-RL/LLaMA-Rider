@@ -1,0 +1,39 @@
+python main.py \
+    --run_name full_rider \
+    --output_dir ./output/full_rider \
+    --dataset /dataset/skill_dataset.jsonl \
+    --learning_rate 0.0001 \
+    --per_device_train_batch_size 1 \
+    --max_steps 200 \
+    --model_name_or_path llama_huggingface/llama-2-70b-chat \
+    --root_dir corpus \
+    --do_train True \
+    --do_eval False \
+    --do_mc_eval False \
+    --do_mmlu_eval False \
+    --source_max_len 512 \
+    --target_max_len 32 \
+    --dataset_format skill \
+    --per_device_eval_batch_size 1 \
+    --gradient_accumulation_steps 16 \
+    --logging_steps 10 \
+    --save_strategy steps \
+    --data_seed 42 \
+    --save_steps 10 \
+    --save_total_limit 20 \
+    --evaluation_strategy steps \
+    --eval_dataset_size 4 \
+    --max_eval_samples 4 \
+    --eval_steps 10000 \
+    --optim paged_adamw_32bit \
+    --report_to wandb \
+    --group_by_length \
+    --lora_r 64 \
+    --lora_alpha 16 \
+    --lora_dropout 0.05 \
+    --lora_modules all \
+    --double_quant \
+    --quant_type nf4 \
+    --bf16 \
+    --bits 4 \
+    --gradient_checkpointing \

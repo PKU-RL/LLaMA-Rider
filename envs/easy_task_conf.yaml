@@ -1,0 +1,61 @@
+
+########## log-based tasks
+harvest_log:
+  target_name: "log"
+  target_quantity: 1
+  max_steps: 3000
+
+harvest_cobblestone:
+  biome: "extreme_hills"
+  target_name: "cobblestone"
+  target_quantity: 1
+  initial_inventory:
+    wooden_pickaxe: 1
+  max_steps: 3000
+
+
+harvest_milk_with_bucket:
+  target_name: "milk_bucket"
+  target_quantity: 1
+  initial_inventory:
+    bucket: 1
+  initial_mobs: ["cow","cow","cow","sheep","sheep","sheep"]
+  initial_mob_spawn_range_low: [-30, 1, -30]
+  initial_mob_spawn_range_high: [30, 1, 30]
+  max_steps: 3000
+
+harvest_wool_with_shears:
+  target_name: "wool"
+  target_quantity: 1
+  initial_inventory:
+    shears: 1
+  initial_mobs: ["cow","cow","cow","sheep","sheep","sheep"]
+  initial_mob_spawn_range_low: [-30, 1, -30]
+  initial_mob_spawn_range_high: [30, 1, 30]
+  max_steps: 3000
+
+harvest_beef_with_diamond_sword:
+  target_name: "beef"
+  target_quantity: 1
+  initial_inventory:
+    diamond_sword: 1
+  initial_mobs: ["cow","cow","cow","sheep","sheep","sheep"]
+  initial_mob_spawn_range_low: [-30, 1, -30]
+  initial_mob_spawn_range_high: [30, 1, 30]
+  max_steps: 3000
+
+harvest_mutton_with_diamond_sword:
+  target_name: "mutton"
+  target_quantity: 1
+  initial_inventory:
+    diamond_sword: 1
+  initial_mobs: ["cow","cow","cow","sheep","sheep","sheep"]
+  initial_mob_spawn_range_low: [-30, 1, -30]
+  initial_mob_spawn_range_high: [30, 1, 30]
+  max_steps: 3000
+
+craft_planks:
+  biome: "plains"
+  target_name: "planks"
+  target_quantity: 1
+  max_steps: 3000
