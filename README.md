@@ -1,10 +1,7 @@
 # LLaMA-Rider: Spurring Large Language Models to Explore the Open World
 
 <div align="center">
-
 [[Arxiv Paper]](https://arxiv.org/abs/2310.08922)
-
-
 ---
 
 ![llama-rider](figs/llama-rider.png)
