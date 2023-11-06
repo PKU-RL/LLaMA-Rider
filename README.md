@@ -1,4 +1,4 @@
-# LLaMA-Rider: Spurring Large Language Models to Explore the Open World
+# <img src="figs/steveonllm.png" alt="steveonllm" style="zoom:4%;" /> LLaMA-Rider: Spurring Large Language Models to Explore the Open World
 
 [[Arxiv Paper]](https://arxiv.org/abs/2310.08922)
 
@@ -6,8 +6,7 @@
 
 
 
-
-![llama-rider](figs/llama-rider.png)
+<img src="figs/introfig.png" alt="llama-rider" style="zoom:15%;" />
 
 **LLaMA-Rider** is a two-stage learning framework that spurs Large Language Models (LLMs) to explore the open world and learn to accomplish multiple tasks. This repository contains the implementation of **LLaMA-Rider** in the sandbox game Minecraft, and the code is largely based on the [Plan4MC](https://github.com/PKU-RL/Plan4MC) repository.
 
@@ -37,6 +36,15 @@ The installation of MineDojo and Plan4MC is the same as that in the [Plan4MC](ht
   ```shell
   pip install -r requirements.txt
   ```
+
+## Method overview
+
+<img src="figs/llama-rider.png" alt="llama-rider" style="zoom:100%;" />
+
+**LLaMA-Rider** is a two-stage framework:
+
+* Exploration stage: LLM explores the open world with the help of the environmental feedback, where a feedback-revision mechanism helps the LLM revise its previous decisions to align with the environment
+* Learning stage: The experiences collected during exploration stage are processed into a supervised dataset and used for supervised fine-tuning (SFT) of the LLM
 
 ## Exploration stage
 
@@ -68,24 +76,36 @@ For learning stage, we use [QLoRA](https://github.com/artidoro/qlora) to train t
 sh train/scripts/sft_70B.sh
 ```
 
+## Evaluation
+
 For evaluation with the LLM after SFT, run
 
 ```shell
 python collect_feedback.py --adapter /path/to/adatper
 ```
 
+## Main results
+
+**LLaMA-Rider** outperforms ChatGPT planner on average across 30 tasks in Minecraft based on LLaMA-2-70B-chat. 
+
+Besides, **LLaMA-Rider** can accomplish 56.25% more tasks after learning stage using only a 1.3k supervised data, showing the efficiency and effectiveness of the framework.
+
+![mresult](figs/mresult.jpg)
+
+We also found **LLaMA-Rider** can achieve better performance in unseen iron-based tasks, which are more difficult, after exploration & learning in 30 log/stone/mob-based tasks, showing the generalization of the learned decision making capabilities.
+
+![ironresult](figs/ironresult.jpg)
+
 ## Citation
 
 If you use our method or code in your research, please consider citing the paper as follows:
 
 ```latex
-@misc{feng2023llama,
+@article{feng2023llama,
       title={LLaMA Rider: Spurring Large Language Models to Explore the Open World}, 
       author={Yicheng Feng and Yuxuan Wang and Jiazheng Liu and Sipeng Zheng and Zongqing Lu},
-      year={2023},
-      eprint={2310.08922},
-      archivePrefix={arXiv},
-      primaryClass={cs.LG}
+      journal={arXiv preprint arXiv:2310.08922},
+      year={2023}
 }
 ```
 
