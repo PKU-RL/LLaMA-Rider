@@ -79,13 +79,11 @@ python collect_feedback.py --adapter /path/to/adatper
 If you use our method or code in your research, please consider citing the paper as follows:
 
 ```latex
-@misc{feng2023llama,
+@article{feng2023llama,
       title={LLaMA Rider: Spurring Large Language Models to Explore the Open World}, 
       author={Yicheng Feng and Yuxuan Wang and Jiazheng Liu and Sipeng Zheng and Zongqing Lu},
-      year={2023},
-      eprint={2310.08922},
-      archivePrefix={arXiv},
-      primaryClass={cs.LG}
+      journal={arXiv preprint arXiv:2310.08922},
+      year={2023}
 }
 ```
 
