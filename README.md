@@ -1,12 +1,14 @@
-# <img src="figs/steveonllm.png" alt="steveonllm" width="50px" /> LLaMA-Rider: Spurring Large Language Models to Explore the Open World
+# <img src="figs/steveonllm.png" alt="steveonllm" width="45px" /> LLaMA-Rider: Spurring Large Language Models to Explore the Open World
 
 [[Arxiv Paper]](https://arxiv.org/abs/2310.08922)
 
 ---
 
+<div align=center>
+  <img src="figs/introfig.png" alt="llama-rider" width="400px" />
+</div>
 
 
-<img src="figs/introfig.png" alt="llama-rider" width="400px" />
 
 **LLaMA-Rider** is a two-stage learning framework that spurs Large Language Models (LLMs) to explore the open world and learn to accomplish multiple tasks. This repository contains the implementation of **LLaMA-Rider** in the sandbox game Minecraft, and the code is largely based on the [Plan4MC](https://github.com/PKU-RL/Plan4MC) repository.
 
